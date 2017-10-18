@@ -1,13 +1,14 @@
 body {
-  background: #1C242D;
+  background: #0B1D3B;
+  font-size: 1.12em;
 }
 img {
   height: 32px;
 }
 #app table{
   box-shadow: 0 0 3px rgba(10,10,10,0.4);
-  background: #242F39;
-  color: #A9CF54;;
+  background: #183273;
+  color: #C4C4C4;;
   padding: 5px;
   margin: 3px;
 }
@@ -17,7 +18,7 @@ img {
 #app table tr:nth-child(2n) {
   background: rgba(255,255,255,0.02);
 }
-#herolist, #opponents {
+#herolist tr, #opponents tr {
   cursor: pointer;
 }
 #herolist, #advantages {
@@ -26,7 +27,12 @@ img {
 #opponents {
   float: right;
 }
-
+.scroll-box {
+  height: 35em;
+  width: 16em;
+  overflow:  scroll;
+  float: left;
+}
 
 td{
   padding: 3px;

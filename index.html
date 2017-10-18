@@ -14,6 +14,7 @@
 
 <body>
   <div id="app">
+    <div class="scroll-box">
     <table id="herolist">
       <template v-for="(name, hero) in heroes">
         <tr v-if="!selected.includes(hero)" v-on:click="toggleSelect(hero)">
@@ -21,12 +22,15 @@
         </tr>
       </template>
     </table>
+    </div>
 
+    <div class="scroll-box">
     <table id="opponents">
       <tr v-for="hero in selected" v-on:click="toggleSelect(hero)">
         <td><img v-bind:src="imgSrc(hero)"></td><td class="name-text"> {{ heroes[hero][0] }} </td>
       </tr>
     </table>
+    </div>
 
     <table id="advantages">
       <template v-for="hero in adv_sorted">
