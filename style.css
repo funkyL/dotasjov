@@ -1,34 +1,100 @@
-tr, td {
+div, tr, td {
   padding: 0;
   margin: 0;
 }
-
+html{
+  height: 100%
+}
 body {
-  background: #0B1D3B;
+  background: rgb(11, 47, 59);
   font-size: 1.12em;
+  color: rgb(196, 196, 196);
+  height: 100%;
 }
 img {
-  width: 64px;
+  height: 2.8em;
   margin: 0;
   padding: 0;
 }
-#app table{
-  box-shadow: 0 0 3px rgba(10,10,10,0.4);
-  background: #183273;
-  color: #C4C4C4;;
-  padding: 0;
-  margin: 3px;
-  z-index: 1;
+
+#herolist tr{
+  cursor: pointer;
+}
+td.name-text {
+  display: none;
+}
+table.purple {
+  position: fixed;
+  margin: auto;
+  background: rgb(165, 63, 63);
+  color: rgb(255, 255, 255);
+}
+#advantages {
+  position: fixed;
+}
+#herolist {
+  width: 58%;
+}
+#herolist table {
+  float: right;
+  margin-left: .5em;
+}
+div#app {
+  height: 100%;
+}
+div.scroll-box {
+  height: 100%;
+  overflow: scroll;
+  float: right;
+}
+table {
+  background: rgba(0, 97, 123, 0.5);
 }
 #app table tr {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.08);
 }
 #app table tr:nth-child(2n) {
   background: rgba(255,255,255,0.02);
 }
+
+
+@media (max-width: 23em){
+  img {
+    height: 2em;
+  }
+}
+
+@media (min-width: 40.8em){
+  #app table.purple {
+    position: inherit;
+    margin-bottom: .4em;
+  }
+  td.name-text {
+    display: inline-block;
+    padding: .6em;
+    width: 10em;
+  }
+  img {
+    height: 2.3em;
+  }
+}
+
+/*
+#app table{
+  box-shadow: 0 0 3px rgba(10,10,10,0.4);
+  background: #183273;
+
+  padding: 0;
+  z-index: 1;
+}
+
+
 #app table.purple {
-  background: #4e1482;
+  background: #111;;
   position: fixed;
+  top: 0;
+  margin-top: 0;
+  border-bottom: .2em solid #111;
 }
 #app table.purple tr {
   background: rgba(255, 0, 198, 0.17);
@@ -37,29 +103,49 @@ img {
 #app table.purple tr:nth-child(2n) {
   background: rgba(255, 0, 198, 0.10);
 }
+#app table.purple tr {
+  background: rgba(255, 0, 198, 0.17);
+  color: #EFEFEF;
+}
+#app table.purple tr:nth-child(2n) {
+  background: rgba(255, 0, 198, 0.10);
+}
+
+
+
+
+
+
+
+
+
+/*
+
 #herolist table:not(.purple){
   position: relative;
-  top: 12.5em;
+  top: 12.2em;
   z-index: 0;
-}
-#herolist tr{
-  cursor: pointer;
 }
 div.scroll-box{
   table-layout: fixed;
   height: 32em;
   overflow: scroll;
-  float:left;
+  float: right;
 }
-#herolist.scroll-box td:first-child {
-  width: 64px;
-}
-.scroll-box td:last-child {
-  width: 12em;
-  height: 1.4em;
-}
-@media (max-width: 820px){
-  td.name-text {
-    display: none;
+
+@media (max-width: 40.8em){
+
+  td {
+    max-width: 28%;
+  }
+  img {
+    height: 3.4em;
+  }
+  #app table:not(.purple){
+    top: 19em;
+  }
+  #herolist table {
+    position:  absolute;
+    float: right;
   }
 }
