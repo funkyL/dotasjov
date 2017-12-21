@@ -78,74 +78,8 @@ table {
     height: 2.3em;
   }
 }
-
-/*
-#app table{
-  box-shadow: 0 0 3px rgba(10,10,10,0.4);
-  background: #183273;
-
-  padding: 0;
-  z-index: 1;
-}
-
-
-#app table.purple {
-  background: #111;;
-  position: fixed;
-  top: 0;
-  margin-top: 0;
-  border-bottom: .2em solid #111;
-}
-#app table.purple tr {
-  background: rgba(255, 0, 198, 0.17);
-  color: #EFEFEF;
-}
-#app table.purple tr:nth-child(2n) {
-  background: rgba(255, 0, 198, 0.10);
-}
-#app table.purple tr {
-  background: rgba(255, 0, 198, 0.17);
-  color: #EFEFEF;
-}
-#app table.purple tr:nth-child(2n) {
-  background: rgba(255, 0, 198, 0.10);
-}
-
-
-
-
-
-
-
-
-
-/*
-
-#herolist table:not(.purple){
-  position: relative;
-  top: 12.2em;
-  z-index: 0;
-}
-div.scroll-box{
-  table-layout: fixed;
-  height: 32em;
-  overflow: scroll;
-  float: right;
-}
-
-@media (max-width: 40.8em){
-
-  td {
-    max-width: 28%;
-  }
-  img {
-    height: 3.4em;
-  }
-  #app table:not(.purple){
-    top: 19em;
-  }
-  #herolist table {
-    position:  absolute;
-    float: right;
+@media (min-width: 63.1em) {
+  #app table.purple {
+    float: left;
   }
 }
