@@ -12,7 +12,7 @@ body {
   height: 100%;
 }
 img {
-  height: 2.8em;
+  height: 4.5em;
   margin: 0;
   padding: 0;
 }
@@ -33,11 +33,11 @@ table.purple {
   position: fixed;
 }
 #herolist {
-  width: 58%;
+  width: 59%;
 }
 #herolist table {
   float: right;
-  margin-left: .5em;
+  margin-left: .3em;
 }
 div#app {
   height: 100%;
@@ -78,7 +78,7 @@ table {
     height: 2.3em;
   }
 }
-@media (min-width: 63.1em) {
+@media (min-width: 61.45em) {
   #app table.purple {
     float: left;
   }
