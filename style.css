@@ -58,6 +58,12 @@ table {
 }
 
 
+@media (max-width: 34em){
+  img {
+    height: 2.8em;
+  }
+}
+
 @media (max-width: 23em){
   img {
     height: 2em;
