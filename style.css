@@ -72,8 +72,9 @@ table {
 
 @media (min-width: 40.8em){
   #app table.purple {
-    position: inherit;
+    position: fixed;
     margin-bottom: .4em;
+    z-index: 2;
   }
   td.name-text {
     display: inline-block;
