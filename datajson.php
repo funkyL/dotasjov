@@ -2,7 +2,7 @@
 $start = time();
 require 'vendor/autoload.php';
 require './simple_html_dom.php';
-$dota_version = "7.08";
+$dota_version = "7.10";
 
 use GuzzleHttp\Client;
 
@@ -86,6 +86,7 @@ function write_file($content, $filepath){
 
 
 // Execution
+echo "Dota version ".$dota_version."\n";
 echo "Retreiving hero list..\n";
 $heroes = get_heroes();
 $matchups = array();
