@@ -1,0 +1,92 @@
+div, tr, td {
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%
+}
+body {
+  background: rgb(11, 47, 59);
+  font-size: 1.12em;
+  color: rgb(196, 196, 196);
+  height: 100%;
+}
+img {
+  height: 4.5em;
+  margin: 0;
+  padding: 0;
+}
+
+#herolist tr{
+  cursor: pointer;
+}
+td.name-text {
+  display: none;
+}
+table.purple {
+  position: fixed;
+  margin: auto;
+  background: rgb(165, 63, 63);
+  color: rgb(255, 255, 255);
+}
+#advantages {
+  position: fixed;
+}
+#herolist {
+  width: 59%;
+}
+#herolist table {
+  float: right;
+  margin-left: .3em;
+}
+div#app {
+  height: 100%;
+}
+div.scroll-box {
+  height: 100%;
+  overflow: scroll;
+  float: right;
+}
+table {
+  background: rgba(0, 97, 123, 0.5);
+}
+#app table tr {
+  background: rgba(255,255,255,0.08);
+}
+#app table tr:nth-child(2n) {
+  background: rgba(255,255,255,0.02);
+}
+
+
+@media (max-width: 34em){
+  img {
+    height: 2.8em;
+  }
+}
+
+@media (max-width: 23em){
+  img {
+    height: 2em;
+  }
+}
+
+@media (min-width: 40.8em){
+  #app table.purple {
+    position: fixed;
+    margin-bottom: .4em;
+    z-index: 2;
+  }
+  td.name-text {
+    display: inline-block;
+    padding: .6em;
+    width: 10em;
+  }
+  img {
+    height: 2.3em;
+  }
+}
+@media (min-width: 61.45em) {
+  #app table.purple {
+    float: left;
+  }
+}

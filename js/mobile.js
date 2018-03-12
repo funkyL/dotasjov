@@ -1,5 +1,5 @@
 //import * as jsonFile from 'http://localhost/dotasjov/data2.json';
-var dataURL = './data.json';
+var dataURL = '../data/data.json';
 
 var app = new Vue({
   el: '#app',
@@ -50,7 +50,7 @@ var app = new Vue({
     },
     imgSrc(hero, db=0){
       if (db) { return this.heroes[hero][1] }
-      else {return "./img/" + hero + ".jpg"}
+      else {return "../img/" + hero + ".jpg"}
     }
   }
 });

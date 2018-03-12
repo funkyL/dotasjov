@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="../js/vue.js"></script>
+  <script src="../js/lodash.js"></script>
+  <script src="../js/vue-resource.js"></script>
+ <!--  <script src="https://unpkg.com/vue"></script>-->
+  <script src="../js/mobile.js" defer></script>
+
+</head>
+
+<body>
+  <div id="app">
+    <div id="herolist" class="scroll-box">
+      <table class="purple">
+        <tr class="purple" v-for="hero in selected" v-on:click="toggleSelect(hero)" >
+          <td><img v-bind:src="imgSrc(hero)"></td><td class="name-text"> {{ heroes[hero][0] }} </td>
+        </tr>
+      </table>
+      <table>
+        <template v-for="(name, hero) in heroes">
+          <tr v-if="!selected.includes(hero)" v-on:click="toggleSelect(hero)">
+            <td><img v-bind:src="imgSrc(hero)"></td><td class="name-text"> {{ name[0] }} </td>
+          </tr>
+        </template>
+      </table>
+    </div>
+
+
+    <div id="advantages" class="scroll-box">
+
+      <table>
+        <template v-for="hero in adv_sorted">
+          <tr v-if="!selected.includes(hero['hero'])">
+            <td> {{ (hero['adv']-100).toFixed(2) }} </td><td><img v-bind:src="imgSrc(hero['hero'])"></td><td class="name-text"> {{ hero['name'] }} </td>
+          </tr>
+        </template>
+      </table>
+
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>
