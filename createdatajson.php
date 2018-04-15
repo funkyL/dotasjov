@@ -2,7 +2,7 @@
 $start = time();
 require 'vendor/autoload.php';
 require './php/simple_html_dom.php';
-$dota_version = "7.10";
+$dota_version = "7.13";
 
 use GuzzleHttp\Client;
 
