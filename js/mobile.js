@@ -20,7 +20,7 @@ var app = new Vue({
         var result = 100;
         for (n in this.selected){
           var sel_hero = this.selected[n];
-          result += this.matchups[adv_hero][sel_hero];
+          result += this.matchups[sel_hero][adv_hero];
         };
         this.advantages[adv_hero]['adv'] = result;
       };
