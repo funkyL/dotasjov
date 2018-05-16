@@ -49,7 +49,7 @@ function fecth_hero_matchup($hero){
 
 
   // call dotabuff
-  $endpoint = 'heroes/'.$hero.'/matchups?date=patch_'.$GLOBALS['dota_version'];
+  $endpoint = 'heroes/'.$hero.'/counters?date=patch_'.$GLOBALS['dota_version'];
   $html = str_get_html(http_call($endpoint));
 
   $matchups = array(); // container array for matchup advantages
