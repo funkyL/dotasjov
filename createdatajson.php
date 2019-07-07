@@ -2,7 +2,7 @@
 $start = time();
 require 'vendor/autoload.php';
 require './php/simple_html_dom.php';
-$dota_version = "7.22";
+$dota_version = "week"; // patch_x.xx, week, month, 3month, 6month, year, season_x
 
 use GuzzleHttp\Client;
 
@@ -49,7 +49,7 @@ function fecth_hero_matchup($hero){
 
 
   // call dotabuff
-  $endpoint = 'heroes/'.$hero.'/counters?date=patch_'.$GLOBALS['dota_version'];
+  $endpoint = 'heroes/'.$hero.'/counters?date='.$GLOBALS['dota_version'];
   $html = str_get_html(http_call($endpoint));
 
   $matchups = array(); // container array for matchup advantages

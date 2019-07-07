@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="../js/vue.js"></script>
+  <script src="../js/lodash.js"></script>
+  <script src="../js/vue-resource.js"></script>
+ <!--  <script src="https://unpkg.com/vue"></script>-->
+  <script src="../js/advanced.js" defer></script>
+
+</head>
+
+<body>
+  <div id="app">
+
+      <div id="counter-t2">
+
+        <h2>Pick t1</h2>
+        <p>Calculated advantage against t2</p>
+        <table>
+          <thead><tr></th><th>name/adv</th><th>asc/desc</th></tr></thead>
+          <tbody>
+          <template v-for="idx in totalCountersT2_sorted">
+            <tr v-if="!isNotSelected(idx['hero'])" v-on:click="select(idx['hero'],'t1')">
+              <td><img v-bind:src="imgSrc(idx['hero'])"></td><td class="name-text"> {{ idx['name'] }} </td>
+              <td> {{ prettyNumber(idx['adv'])  }} </td>
+            </tr>
+          </template>
+        </tbody>
+        </table>
+      </div>
+
+    <div id="heads-up">
+      <table>
+        <tr>
+          <td>Comparisons  T2 \</td>
+          <td v-on:click="deselect(side['team1'][0])"> <img v-bind:src="imgSrc(side['team1'][0])"> </td>
+          <td v-on:click="deselect(side['team1'][1])"> <img v-bind:src="imgSrc(side['team1'][1])"> </td>
+          <td v-on:click="deselect(side['team1'][2])"> <img v-bind:src="imgSrc(side['team1'][2])"> </td>
+          <td v-on:click="deselect(side['team1'][3])"> <img v-bind:src="imgSrc(side['team1'][3])"> </td>
+          <td v-on:click="deselect(side['team1'][4])"> <img v-bind:src="imgSrc(side['team1'][4])"> </td>
+          <td>Total</td>
+        </tr>
+        <tr>
+          <td v-on:click="deselect(side['team2'][0])"> <img v-bind:src="imgSrc(side['team2'][0])"> </td><td> {{ singleMatchup(0,0) }} </td><td> {{ singleMatchup(1,0) }} </td><td> {{ singleMatchup(2,0) }} </td><td> {{ singleMatchup(3,0) }} </td><td> {{ singleMatchup(4,0) }} </td>
+        </tr>
+        <tr>
+          <td v-on:click="deselect(side['team2'][0])"> <img v-bind:src="imgSrc(side['team2'][1])"> </td><td> {{ singleMatchup(0,1) }} </td><td> {{ singleMatchup(1,1) }} </td><td> {{ singleMatchup(2,1) }} </td><td> {{ singleMatchup(3,1) }} </td><td> {{ singleMatchup(4,1) }} </td>
+        </tr>
+        <tr>
+          <td v-on:click="deselect(side['team2'][0])"> <img v-bind:src="imgSrc(side['team2'][2])"> </td><td> {{ singleMatchup(0,2) }} </td><td> {{ singleMatchup(1,2) }} </td><td> {{ singleMatchup(2,2) }} </td><td> {{ singleMatchup(3,2) }} </td><td> {{ singleMatchup(4,2) }} </td>
+        </tr>
+        <tr>
+          <td v-on:click="deselect(side['team2'][0])"> <img v-bind:src="imgSrc(side['team2'][3])"> </td><td> {{ singleMatchup(0,3) }} </td><td> {{ singleMatchup(1,3) }} </td><td> {{ singleMatchup(2,3) }} </td><td> {{ singleMatchup(3,3) }} </td><td> {{ singleMatchup(4,3) }} </td>
+        </tr>
+        <tr>
+          <td v-on:click="deselect(side['team2'][0])"> <img v-bind:src="imgSrc(side['team2'][4])"> </td><td> {{ singleMatchup(0,4) }} </td><td> {{ singleMatchup(1,4) }} </td><td> {{ singleMatchup(2,4) }} </td><td> {{ singleMatchup(3,4) }} </td><td> {{ singleMatchup(4,4) }} </td>
+        </tr>
+        <tr>
+          <td>Total</td><td> {{ singleTotalMatchup['team1'][0] }} </td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="counter-t1">
+
+      <h2>Pick t2</h2>
+      <p>Calculated advantage against t1</p>
+      <table>
+        <template v-for="(name, hero) in heroes">
+          <tr v-if="!isNotSelected(hero)" v-on:click="select(hero,'t2')">
+            <td><img v-bind:src="imgSrc(hero)"></td><td class="name-text"> {{ name[0] }} </td>
+          </tr>
+        </template>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>

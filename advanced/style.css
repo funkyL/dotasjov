@@ -1,0 +1,25 @@
+
+table, td {
+  border: 1px solid black;
+}
+div {
+  float: left;
+  padding: 1rem;
+}
+#heads-up td {
+  width: 6rem;
+  height: 1rem;
+}
+
+#heads-up img {
+  height: 2.5rem;
+}
+
+img {
+  height: 1rem;
+}
+div#counter-t2, div#counter-t1{
+  height: 28rem;
+  overflow:auto;
+  background: #cfcfcf;
+}
